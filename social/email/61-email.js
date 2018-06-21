@@ -55,7 +55,8 @@ module.exports = function(RED) {
         var smtpOptions = {
             host: node.outserver,
             port: node.outport,
-            secure: node.secure
+            secure: node.secure,
+            ignoreTLS: !node.secure
         }
 
         if (this.userid && this.password) {
